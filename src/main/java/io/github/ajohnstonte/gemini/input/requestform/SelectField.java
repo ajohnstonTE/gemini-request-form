@@ -23,9 +23,9 @@ public class SelectField<T>
   private List<String> selectedValues;
   private Boolean allowMultipleValues = null;
   
-  public SelectField(IRequestForm contract, String name, Class<T> type)
+  public SelectField(IRequestForm form, String name, Class<T> type)
   {
-    super(contract, name, type);
+    super(form, name, type);
     options = new ArrayList<>();
   }
   

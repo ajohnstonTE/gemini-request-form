@@ -14,9 +14,9 @@ public class NumberField<T>
   private T min;
   private T max;
 
-  public NumberField(IRequestForm contract, String name, Class<T> type)
+  public NumberField(IRequestForm form, String name, Class<T> type)
   {
-    super(contract, name, type);
+    super(form, name, type);
   }
 
   public T getMin()

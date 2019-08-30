@@ -11,9 +11,9 @@ public abstract class ExtendableField<T, S extends ExtendableField<T, S>>
   extends Field<T>
 {
 
-  public ExtendableField(IRequestForm contract, String name, Class<T> type)
+  public ExtendableField(IRequestForm form, String name, Class<T> type)
   {
-    super(contract, name, type);
+    super(form, name, type);
   }
 
   @Override

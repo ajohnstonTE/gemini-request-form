@@ -17,9 +17,9 @@ public class TextField<T>
   private Integer minLength;
   private Integer maxLength;
   
-  public TextField(IRequestForm contract, String name, Class<T> type)
+  public TextField(IRequestForm form, String name, Class<T> type)
   {
-    super(contract, name, type);
+    super(form, name, type);
   }
   
   public Integer getMinLength()

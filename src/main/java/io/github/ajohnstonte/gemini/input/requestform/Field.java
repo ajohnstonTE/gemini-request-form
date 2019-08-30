@@ -27,13 +27,13 @@ public class Field<T>
   private T                        value;
   private T                        defaultOnProcess;
 
-  public Field(IRequestForm contract, String name, Class<T> type)
+  public Field(IRequestForm form, String name, Class<T> type)
   {
     this.name = name;
     this.customValidators = new ArrayList<>();
     this.type = type;
     this.determineDefaultValueAccess();
-    contract.addField(this);
+    form.addField(this);
   }
 
   @Override
