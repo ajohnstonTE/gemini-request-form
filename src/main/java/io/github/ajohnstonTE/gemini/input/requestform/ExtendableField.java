@@ -1,8 +1,10 @@
 package io.github.ajohnstonTE.gemini.input.requestform;
 
+import com.techempower.gemini.input.Input;
 import io.github.ajohnstonTE.gemini.input.Values;
 import com.techempower.gemini.input.validator.Validator;
 
+import java.util.function.BiConsumer;
 import java.util.function.Function;
 
 public abstract class ExtendableField<T, S extends ExtendableField<T, S>>
@@ -23,6 +25,13 @@ public abstract class ExtendableField<T, S extends ExtendableField<T, S>>
 
   @Override
   public S addFieldValidator(FieldValidator<T> fieldValidator)
+  {
+    super.addFieldValidator(fieldValidator);
+    return self();
+  }
+
+  @Override
+  public S addFieldValidator(BiConsumer<IField<T>, Input> fieldValidator)
   {
     super.addFieldValidator(fieldValidator);
     return self();

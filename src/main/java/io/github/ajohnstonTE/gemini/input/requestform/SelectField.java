@@ -21,6 +21,7 @@ public class SelectField<T>
 {
   private List<Option> options;
   private List<String> selectedValues;
+  private Boolean allowMultipleValues = null;
   
   public SelectField(IRequestForm contract, String name, Class<T> type)
   {
@@ -72,6 +73,31 @@ public class SelectField<T>
   {
     this.selectedValues = selectedValues;
     return this;
+  }
+
+  /**
+   * Explicitly sets whether or not multiple values are allowed or not.
+   */
+  public SelectField<T> setAllowMultipleValues(boolean allowMultipleValues)
+  {
+    this.allowMultipleValues = allowMultipleValues;
+    return this;
+  }
+
+  /**
+   * If not specified by {@link #setAllowMultipleValues(boolean)}, is true if the managed type is either an array or is
+   * a subclass of {@link Iterable}.
+   *
+   * @return whether or not multiple values can be specified for the field
+   */
+  public boolean isAllowMultipleValues()
+  {
+    if (allowMultipleValues != null)
+    {
+      return allowMultipleValues;
+    }
+    final Class<T> type = getType();
+    return type.isArray() || Iterable.class.isAssignableFrom(type);
   }
   
   protected List<String> selectedValues()

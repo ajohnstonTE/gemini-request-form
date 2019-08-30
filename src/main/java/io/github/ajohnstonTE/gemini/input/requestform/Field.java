@@ -1,10 +1,12 @@
 package io.github.ajohnstonTE.gemini.input.requestform;
 
+import com.techempower.gemini.input.Input;
 import io.github.ajohnstonTE.gemini.input.Values;
 import com.techempower.gemini.input.validator.Validator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiConsumer;
 import java.util.function.Function;
 
 /**
@@ -46,6 +48,19 @@ public class Field<T>
   {
     addValidator(fieldValidator.setField(this).asValidator());
     return this;
+  }
+
+  // Temporary implementation while I find a better way of doing this. Ideally shouldn't require two methods.
+  public Field<T> addFieldValidator(BiConsumer<IField<T>, Input> fieldValidator)
+  {
+    return addFieldValidator(new FieldValidator<T>()
+    {
+      @Override
+      protected void process(Input input)
+      {
+        fieldValidator.accept(getField(), input);
+      }
+    });
   }
 
   @Override
