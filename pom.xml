@@ -43,11 +43,6 @@
     <owasp-dependency-check-plugin.version>4.0.2</owasp-dependency-check-plugin.version>
   </properties>
 
-  <!--<parent>
-    <groupId>com.techempower</groupId>
-    <artifactId>gemini-parent</artifactId>
-    <version>2.25.0</version>
-  </parent>-->
   <dependencies>
     <dependency>
       <groupId>com.techempower</groupId>
@@ -220,4 +215,14 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 </project>
