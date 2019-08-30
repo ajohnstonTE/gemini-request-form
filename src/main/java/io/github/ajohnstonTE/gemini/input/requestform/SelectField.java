@@ -122,6 +122,17 @@ public class SelectField<T>
       allOptions = valuableOptions;
     }
     List<Validator> validators = super.getStandardValidators();
+    validators.add(input -> {
+      boolean allowMultipleValues = this.isAllowMultipleValues();
+      if (!allowMultipleValues)
+      {
+        String[] values = input.values().getStrings(getName());
+        if (values != null && values.length > 1)
+        {
+          input.addError(getName(), getName() + " may not have more than one value.");
+        }
+      }
+    });
     validators.add(new SetFieldValidator<T>((Object[]) allOptions.toArray(String[]::new))
         .setField(this)
         .asValidator());
