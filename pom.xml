@@ -8,7 +8,7 @@
   <description>
     An extension to Techempower's Gemini framework for http request parameter evaluation.
   </description>
-  <groupId>io.github.ajohnstonTE</groupId>
+  <groupId>io.github.ajohnstonte</groupId>
   <version>0.0.1</version>
   <url>https://github.com/ajohnstonTE/gemini-response-form</url>
   <scm>
