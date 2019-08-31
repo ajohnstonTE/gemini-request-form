@@ -13,6 +13,8 @@
   <url>https://github.com/ajohnstonTE/gemini-response-form</url>
   <scm>
     <url>https://github.com/ajohnstonTE/gemini-response-form</url>
+    <connection>scm:git:https://github.com/ajohnstonTE/gemini-response-form.git</connection>
+    <developerConnection>scm:git:git@github.com:ajohnstonTE/gemini-response-form.git</developerConnection>
   </scm>
 
   <developers>
