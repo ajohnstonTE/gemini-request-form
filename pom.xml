@@ -7,13 +7,13 @@
     An extension to Techempower's Gemini framework for http request parameter evaluation.
   </description>
   <groupId>io.github.ajohnstonte</groupId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
   <url>https://github.com/ajohnstonTE/gemini-response-form</url>
   <scm>
     <url>https://github.com/ajohnstonTE/gemini-response-form</url>
     <connection>scm:git:https://github.com/ajohnstonTE/gemini-response-form.git</connection>
     <developerConnection>scm:git:git@github.com:ajohnstonTE/gemini-response-form.git</developerConnection>
-    <tag>gemini-response-form-0.0.1</tag>
+    <tag>gemini-response-form-0.0.2</tag>
   </scm>
 
   <developers>
