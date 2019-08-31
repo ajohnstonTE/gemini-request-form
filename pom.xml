@@ -10,7 +10,7 @@
   <version>0.0.4</version>
   <url>https://github.com/ajohnstonTE/gemini-response-form</url>
   <scm>
-    <url>https://github.com/ajohnstonTE/gemini-response-form</url>
+    <url>https://github.com/ajohnstonTE/gemini-response-form.git</url>
     <connection>scm:git:https://github.com/ajohnstonTE/gemini-response-form.git</connection>
     <developerConnection>scm:git:git@github.com:ajohnstonTE/gemini-response-form.git</developerConnection>
     <tag>gemini-response-form-0.0.4</tag>
